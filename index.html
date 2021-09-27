@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,15 +22,15 @@
 <body>
     <div class="header-bg">
         <header>
-            <nav>
-                <div class="container-logo">
-                    <p class="logo">LOUVRE</p>
-                </div>
-
-                <ul class="navigation-list">
+            <div class="container-logo">
+                <p class="logo">Louvre</p>
+            </div>
+            <nav class="navigation-list">
+                <ul>
                     <li><a href="#Visiting">Visiting</a></li>
                     <li><a href="#Explore"> Explore</a></li>
                     <li><a href="#Video">Video</a></li>
+                    <li><a href="#Visiting">Gallery</a></li>
                     <li><a href="#Tickets">Tickets</a> </li>
                     <li><a href="#Contacts">Contacts</a></li>
                 </ul>
@@ -38,9 +40,10 @@
     </div>
 
     <main>
-        <div class="welcome-bg" id="Welcome">
-            <section class="dark-section">
-                <img src="./assets/img/1.jpg" class="museum-bg"></img>
+        <div class="welcome-bg">
+            <section class="welcome" id="Welcome">
+                <img src="./assets/img/1.jpg" class="museum-bg" alt="photo">
+                <img src="./assets/img/Sliderpagination.png" class="slider" alt="photo">
                 <div class="welcome-title">
                     <h1>
                         WELCOME<br>
@@ -89,7 +92,7 @@
                 </a>
 
                 <a class="link-vt" href="">
-                    <img src="./assets/img/Rectangle(3).jpg" alt="foto" >
+                    <img src="./assets/img/Rectangle(3).jpg" alt="foto">
                     <h3>GREEK HALL</h3>
 
                     <div class="description-vt">
@@ -99,7 +102,7 @@
                 </a>
 
                 <a class="link-vt" href="">
-                    <img src="./assets/img/Rectangle(4).jpg" alt="foto" >
+                    <img src="./assets/img/Rectangle(4).jpg" alt="foto">
                     <h3>MONA LISA</h3>
 
                     <div class="description-vt">
@@ -109,7 +112,7 @@
                 </a>
 
                 <a class="link-vt" href="">
-                    <img src="./assets/img/Rectangle(5).jpg" alt="foto" >
+                    <img src="./assets/img/Rectangle(5).jpg" alt="foto">
                     <h3>NIGHT PALACE</h3>
 
                     <div class="description-vt">
@@ -126,21 +129,32 @@
 
                 <div>
                     <h2>Picture explore</h2>
-                    <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading<br> artist of the Spanish Golden Age.
+                    <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading<br> artist of the Spanish Golden
+                        Age.
                     </p>
                     <p>It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the
                         previous restoration in the 19th century.</p>
                     <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but
                         because it looked different.</p>
                 </div>
-                <div>
-                    <img src="./assets/img/Rectangle(6).jpg" alt="foto">
+                <div class="explore-container">
+                    <div class="before-pic">
+                        <img src="./assets/img/Rectangle(6).jpg" alt="foto">
+                    </div>
+                    <img class="explore-slider" src="./assets/img/explore slider (1).png" alt="foto">
+                    <div class="after-pic">
+                        <img src="./assets/img/Rectanglesecond.png" alt="foto">
+                    </div>
                 </div>
             </div>
         </section>
-        
+
         <section class=" video-section" id="Video">
-            
+            <div class="video-title">
+                <h2>VIDEO JOURNEY</h2>
+                <p>Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa
+                    or Hammurabi's Code</p>
+            </div>
             <div class="player">
                 <button class="play"></button>
                 <button class="play-small"></button>
@@ -150,80 +164,134 @@
                 <button class="volume"></button>
                 <img src="./assets/img/Frame.jpg" alt="player">
             </div>
-            
-            <div class="video-title">
-                <h2>VIDEO JOURNEY</h2>
-                <p>Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</p>
+            <div class="video-menu">
+                <iframe width="454" height="254" src="https://www.youtube.com/embed/zp1BXPX8jcU"
+                    title="YouTube video player" frameborder="0" loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <iframe width="454" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo"
+                    title="YouTube video player" frameborder="0" loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <iframe width="454" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY"
+                    title="YouTube video player" frameborder="0" loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </section>
-        
-    <div class="tickets-bg" id="Tickets">
-        <section class="dark-section">
-            <h2>BUY TICKETS</h2>
-            <div class="tickets-container">
-            <img src="./assets/img/Rectangle(7).jpg" alt="ticket">
-            <form >
-                <h4>Ticket type</h4>
-                <label>
-                    <input type="radio" name="name" value="Permanent exhibition">
-                    Permanent exhibition
-                </label>
-                <br>
-                <label>
-                    <input type="radio" name="name" value="Temporary exhibition">
-                    Temporary exhibition
-                </label>
-                <br>
-                <label>
-                    <input type="radio" name="name" value="Combined Admission">
-                    Combined Admission
-                </label>
-            </form>
-            <div class="amount">
-                <h4>Amount</h4>
-                <p>Basic 18+</p>
-                <input type="number" min="0" max="100" value="1" class="clicker" readonly ></input>
-                <p>Senior 65+</p>
-                <input type="number" min="0" max="100" value="1" class="clicker" readonly ></input>
-                <p>Total price</p> 
-                <button>Buy Now</button>
-            </div>
-        </div>  
-    </section>
-    </div>
-    <section class="section contacts" id="Contacts">
-        <h2>CONTACTS</h2>
-        <div >
-        <p class="contacts-title">Palais Royal <br> Musee du Louvre</p>
-        <p class="contacts-info">address:75001 Paris, France <br> phone:+33(0) 1 40 20 50 50 <br> mail:info@louvre.fr </p>
+
+        <div class="gallery-bg">
+            <section class="gallery">
+                <h2>art gallery</h2>
+                <div class="picture-container">
+                    <div class="picture-inner-container">
+                        <img src="./assets/img/galery/galery1.jpg" alt="">
+                        <img src="./assets/img/galery/galery2.jpg" alt="">
+                        <img src="./assets/img/galery/galery3.jpg" alt="">
+                        <img src="./assets/img/galery/galery4.jpg" alt="">
+                        <img src="./assets/img/galery/galery5.jpg" alt="">
+                        <img src="./assets/img/galery/galery6.jpg" alt="">
+                        <img src="./assets/img/galery/galery7.jpg" alt="">
+                        <img src="./assets/img/galery/galery8.jpg" alt="">
+                        <img src="./assets/img/galery/galery9.jpg" alt="">
+                        <img src="./assets/img/galery/galery10.jpg" alt="">
+                        <img src="./assets/img/galery/galery11.jpg" alt="">
+                        <img src="./assets/img/galery/galery12.jpg" alt="">
+                        <img src="./assets/img/galery/galery13.jpg" alt="">
+                        <img src="./assets/img/galery/galery14.jpg" alt="">
+                        <img src="./assets/img/galery/galery15.jpg" alt="">
+                    </div>
+                </div>
+            </section>
         </div>
-        <img src="./assets/img/Rectangle(8).jpg" alt="map">
-    </section>
+
+        <div class="tickets-bg" id="Tickets">
+            <section class="tickets">
+                <h2>BUY TICKETS</h2>
+                <div class="tickets-container">
+                    <div class="left-side">
+                        <img src="./assets/img/Rectangle(7).jpg" alt="ticket">
+                    </div>
+                    <div class="right-side">
+                        <form>
+                            <h4>Ticket Type</h4>
+                            <div class="form-container">
+                                <label>
+                                    <input type="radio" name="name" value="Permanent exhibition">
+                                    <span>Permanent exhibition</span>
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="name" value="Temporary exhibition">
+                                    <span>Temporary exhibition</span>
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="name" value="Combined Admission">
+                                    <span>Combined Admission</span>
+                                </label>
+                            </div>
+                        </form>
+                        <div class="amount">
+                            <h4>Amount</h4>
+                            <p>Basic 18+</p>
+                            <input type="number" min="0" max="100" value="1" class="clicker" readonly></input>
+                            <p>Senior 65+</p>
+                            <input type="number" min="0" max="100" value="1" class="clicker" readonly></input>
+                            <p class="price">Total &#8364;220</p>
+                            <button>Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="paralax"></div>
+            </section>
+        </div>
+        
+        <section class="section contacts" id="Contacts">
+            <h2>CONTACTS</h2>
+            <div class="contacts-container">
+                <p class="contacts-title">Palais Royal <br> Musee du Louvre</p>
+                <p class="contacts-info">address:75001 Paris, France<br>phone: +33(0) 1 40 20 50 50 <br>
+                    mail: info@louvre.fr </p>
+            
+            <img src="./assets/img/Rectangle(8).jpg" alt="map">
+        </div>
+        </section>
+
     </main>
+
     <div class="footer-bg">
-    <footer>
-        <nav>
-            <div class="container-logo">
-                <p class="logo">LOUVRE</p>
-            </div>
-            <ul class="navigation-list">
-                    <li><a href="#Welcome">Welcome</a></li>
+
+        <footer>
+            <nav>
+                <div class="container-logo">
+                    <p class="logo">LOUVRE</p>
+                </div>
+                <ul class="navigation-list">
                     <li><a href="#Visiting">Visiting</a></li>
-                    <li><a href="#Explore"> Explore</a></li>
+                    <li><a href="#Explore">Explore</a></li>
                     <li><a href="#Video">Video</a></li>
-                    <li><a href="#Tickets">Tickets</a> </li>
+                    <li><a href="#Gallery">Gallery</a> </li>
+                    <li><a href="#Tickets">Tickets</a></li>
                     <li><a href="#Contacts">Contacts</a></li>
-            </ul>
-            <ul class="footer-links" >
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-            </ul>
-        </nav>
-    </footer>
+                </ul>
+                <ul class="footer-links">
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </nav>
+            <div class="rectangle-footer"></div>
+            <div class="rs-info">
+                <span>&#169;2021</span>
+                <span class="rs">The Rolling Scopes School</span>
+                <span>andreypotkas</span>
+            </div>
+        </footer>
     </div>
+    <script src="js/gallery.js"></script>
 </body>
 
 </html>

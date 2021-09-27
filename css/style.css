@@ -83,16 +83,16 @@ html {
   padding: 75px 0;
 }
 
+.dark-section {
+  background-color: black;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .header-bg {
   width: 1920px;
   height: 150px;
   background: #000;
-  margin: 0 auto;
-}
-
-.dark-section {
-  background-color: black;
-  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -103,23 +103,16 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 1440px;
-  height: 200px;
-  margin: 0 auto;
-}
-
-header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-width: 1440px;
-  height: 50px;
+  max-width: 1440px;
+  height: 150px;
+  margin: 0 auto;
 }
 
-header nav .container-logo {
+header .container-logo {
+  text-transform: uppercase;
   letter-spacing: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,24 +120,28 @@ header nav .container-logo {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  line-height: 50px;
+  line-height: 40px;
   font-size: 28px;
   font-family: forum;
   color: white;
-  width: 175px;
-  height: 50px;
+  width: 199px;
+  height: 33px;
 }
 
-header nav .container-logo:before {
+header .container-logo:before {
   position: relative;
   margin-right: 20px;
   content: url("/assets/svg/logo.svg");
 }
 
-header nav .navigation-list {
+header .navigation-list {
+  max-width: 775px;
+}
+
+header .navigation-list ul {
   letter-spacing: 2px;
-  width: 720px;
-  height: 50px;
+  width: 775px;
+  height: 26px;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,42 +149,62 @@ header nav .navigation-list {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-size: 22px;
+  line-height: 26px;
   font-family: roboto;
   font-weight: 200;
   font-style: thin;
 }
 
-header nav .navigation-list a {
+header .navigation-list ul a {
   color: white;
 }
 
-header nav .navigation-list li:nth-child(1):hover {
-  font-size: 25px;
-  text-shadow: white 0 0 5px;
+.gallery-bg {
+  width: 1920px;
+  height: 2200px;
+  margin: 0 auto;
+  background: #000;
 }
 
-header nav .navigation-list li:nth-child(2):hover {
-  font-size: 25px;
-  text-shadow: white 0 0 5px;
+.gallery {
+  padding-top: 75px;
+  margin: 0 auto;
+  width: 1440px;
 }
 
-header nav .navigation-list li:nth-child(3):hover {
-  font-size: 25px;
-  text-shadow: white 0 0 5px;
+.gallery .picture-container {
+  overflow-y: hidden;
+  width: 1440px;
+  height: 2035px;
 }
 
-header nav .navigation-list li:nth-child(4):hover {
-  font-size: 25px;
-  text-shadow: white 0 0 5px;
+.gallery .picture-container .picture-inner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 2900px;
+  row-gap: 24px;
+  -webkit-column-gap: 24px;
+          column-gap: 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-header nav .navigation-list li:nth-child(5):hover {
-  font-size: 25px;
-  text-shadow: white 0 0 5px;
+.gallery h2 {
+  text-transform: uppercase;
+  font-family: forum;
+  font-size: 80px;
+  color: #ffffff;
+  letter-spacing: 5px;
+  line-height: 90px;
 }
 
 .welcome-bg {
@@ -209,16 +226,30 @@ header nav .navigation-list li:nth-child(5):hover {
 .museum-bg {
   position: relative;
   width: 1000px;
-  height: 810px;
+  height: 750px;
   left: 440px;
   background: #000;
+}
+
+.welcome {
+  margin: 0 auto;
+  max-width: 1440px;
+  height: 810px;
+}
+
+.slider {
+  position: absolute;
+  top: 690px;
+  left: 1080px;
+  width: 600px;
+  height: 120px;
 }
 
 .welcome-title {
   width: 598px;
   height: 390px;
   position: absolute;
-  top: 114px;
+  top: 150px;
 }
 
 .welcome-title .title-description {
@@ -358,11 +389,35 @@ header nav .navigation-list li:nth-child(5):hover {
           justify-content: space-between;
 }
 
-.explore img {
-  position: relative;
-  top: 10px;
+.explore .explore-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 12px;
   width: 720px;
   height: 700px;
+}
+
+.explore .explore-container .before-pic {
+  width: 61%;
+}
+
+.explore .explore-container .before-pic img {
+  height: 700px;
+}
+
+.explore .explore-container .after-pic {
+  max-width: 39%;
+  overflow: hidden;
+}
+
+.explore .explore-container .after-pic img {
+  height: 700px;
+}
+
+.explore .explore-container .explore-slider {
+  position: absolute;
+  left: 1380px;
 }
 
 .explore p {
@@ -399,12 +454,26 @@ header nav .navigation-list li:nth-child(5):hover {
 }
 
 .video-section {
+  height: 1246px;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 75px 0 70px 0;
+  margin-top: 75px;
+  margin-bottom: 70px;
+}
+
+.video-section .video-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 42px;
+          column-gap: 42px;
+  padding-bottom: 52px;
+  padding-left: 12px;
 }
 
 .video-section .player {
+  margin-top: 60px;
+  margin-bottom: 40px;
   position: relative;
 }
 
@@ -452,7 +521,7 @@ header nav .navigation-list li:nth-child(5):hover {
 .video-section .player img {
   position: relative;
   width: 1440px;
-  height: 714px;
+  height: 728px;
   left: 8px;
 }
 
@@ -472,14 +541,13 @@ header nav .navigation-list li:nth-child(5):hover {
   color: #9d8665;
   letter-spacing: 5px;
   line-height: 90px;
-  margin-top: 40px;
   position: relative;
   left: 10px;
 }
 
 .video-section .video-title p {
+  margin-top: 4px;
   position: relative;
-  margin-top: 44px;
   padding-left: 8px;
   width: 720px;
   height: 90px;
@@ -491,25 +559,29 @@ header nav .navigation-list li:nth-child(5):hover {
 
 .tickets-bg {
   width: 1920px;
-  height: 893px;
+  height: 1293px;
   margin: 0 auto;
-  background-color: black;
   padding-top: 75px;
 }
 
-.tickets-bg h2 {
+.tickets-bg .tickets {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.tickets-bg .tickets h2 {
   margin-bottom: 103px;
   width: 660px;
   height: 90px;
   text-transform: uppercase;
   font-family: forum;
   font-size: 80px;
-  color: white;
+  color: #9d8665;
   letter-spacing: 5px;
   line-height: 90px;
 }
 
-.tickets-bg h2:after {
+.tickets-bg .tickets h2:after {
   content: "";
   display: block;
   width: 1440px;
@@ -520,18 +592,88 @@ header nav .navigation-list li:nth-child(5):hover {
   margin-bottom: 75px;
 }
 
-.tickets-bg img {
-  width: 720px;
-  height: 550px;
-}
-
-.tickets-bg .tickets-container {
+.tickets-container {
+  margin-bottom: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-form {
+.tickets-container .left-side {
+  width: 720px;
+}
+
+.tickets-container .left-side img {
+  width: 720px;
+  height: 550px;
+}
+
+.tickets-container .right-side {
+  width: 720px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tickets-container .amount {
+  width: 175px;
+  text-align: right;
+}
+
+.tickets-container .amount h4 {
+  font-family: roboto;
+  font-size: 28px;
+  line-height: 28px;
+  margin-bottom: 36px;
+  font-weight: 700;
+}
+
+.tickets-container .amount p {
+  margin-top: 10px;
+  font-family: roboto;
+  font-size: 22px;
+  line-height: 25.78px;
+  font-weight: 300;
+  text-align: left;
+  padding-left: 25px;
+  margin-bottom: 14px;
+}
+
+.tickets-container .amount .price {
+  margin-top: 50px;
+  font-family: roboto;
+  font-size: 28px;
+  line-height: 32.81px;
+  font-weight: 700;
+  letter-spacing: 1.65px;
+}
+
+.tickets-container .amount .clicker {
+  width: 150px;
+  height: 50px;
+  border: solid black 3px;
+  text-align: center;
+  font-family: roboto;
+  font-size: 22px;
+  line-height: 22.78;
+}
+
+.tickets-container .amount button {
+  width: 175px;
+  height: 50px;
+  background: black;
+  font-size: 22px;
+  font-family: roboto;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 50px;
+  color: #ffffff;
+}
+
+.tickets-container form {
   margin-left: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -540,72 +682,53 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  color: white;
   width: 270px;
   height: 262px;
 }
 
-form h4 {
+.tickets-container form .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 25px;
+}
+
+.tickets-container form h4 {
+  font-family: roboto;
+  font-size: 28px;
+  line-height: 28px;
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+
+.tickets-container form p {
   font-family: roboto;
   font-size: 28px;
   line-height: 32.81px;
-  color: white;
 }
 
-form p {
-  font-family: roboto;
-  font-size: 28px;
-  line-height: 32.81px;
-  color: white;
-}
-
-form label {
+.tickets-container form label {
   font-family: roboto;
   font-size: 22px;
   line-height: 25.78px;
-  color: white;
 }
 
-.amount {
-  margin-left: auto;
-  margin-right: 0;
-  color: white;
+.tickets-container form label span {
+  margin-left: 20px;
 }
 
-.amount h4 {
-  font-family: roboto;
-  font-size: 22px;
-  line-height: 25.78px;
-  font-weight: 300;
-}
-
-.amount p {
-  font-family: roboto;
-  font-size: 22px;
-  line-height: 25.78px;
-  font-weight: 300;
-}
-
-.amount .clicker {
-  width: 150px;
-  height: 50px;
-  border: solid white 3px;
-  text-align: center;
-  font-family: roboto;
-  font-size: 22px;
-  line-height: 22.78;
-}
-
-.amount button {
-  width: 175px;
-  height: 50px;
-  background: white;
-  font-size: 22px;
-  font-family: roboto;
-  letter-spacing: 2px;
-  text-align: center;
+.paralax {
+  left: -240px;
+  position: relative;
+  width: 1920px;
+  height: 400px;
+  background: url("/assets/img/parallax.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .contacts {
@@ -621,6 +744,7 @@ form label {
 }
 
 .contacts h2 {
+  padding-left: 7px;
   font-family: forum;
   font-size: 80px;
   color: #9d8665;
@@ -635,42 +759,86 @@ form label {
   height: 3px;
   background-color: #710707;
   position: relative;
-  top: 0px;
+  top: 26px;
+}
+
+.contacts .contacts-container {
+  margin-top: 107px;
+  padding-left: 7px;
 }
 
 .contacts .contacts-title {
-  margin-top: 85px;
-  margin-bottom: 36px;
+  margin-bottom: 47px;
   font-family: roboto;
   font-size: 28px;
   line-height: 32,81px;
   font-weight: 500;
   width: 277px;
+  font-weight: 700;
 }
 
 .contacts .contacts-info {
   font-family: roboto;
   font-size: 22px;
-  line-height: 45.78px;
+  line-height: 50px;
   width: 277px;
 }
 
 .contacts img {
   position: relative;
   left: 480px;
-  top: -221px;
+  top: -255px;
 }
 
 .footer-bg {
   width: 1920px;
-  height: 300px;
+  height: 392px;
   margin: 0 auto;
   background-color: black;
   position: relative;
 }
 
 .footer-bg footer {
+  width: 1440px;
+  height: 392px;
   margin: 0 auto;
+}
+
+.footer-bg footer .rs-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1440px;
+  height: 24px;
+  margin: 0 auto;
+  position: relative;
+  top: 168px;
+}
+
+.footer-bg footer .rs-info span {
+  font-weight: 200;
+  color: #ffffff;
+  font-family: roboto;
+  font-size: 22px;
+  letter-spacing: 2px;
+  line-height: 22px;
+}
+
+.footer-bg footer .rs-info .rs {
+  font-weight: 200;
+  margin-left: 80px;
+}
+
+.footer-bg footer .rectangle-footer {
+  width: 1920px;
+  height: 3px;
+  background: #666666;
+  position: relative;
+  top: 115px;
+  left: -240px;
 }
 
 .footer-bg footer .footer-links {
@@ -716,7 +884,7 @@ form label {
 }
 
 .footer-bg footer nav {
-  padding: 75px 240px;
+  padding: 77px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -739,6 +907,12 @@ form label {
   height: 50px;
 }
 
+.footer-bg footer nav .container-logo p {
+  letter-spacing: 5px;
+  margin-left: 25px;
+  font-weight: 200;
+}
+
 .footer-bg footer nav .container-logo:before {
   content: url("/assets/svg/logo.svg");
 }
@@ -748,8 +922,9 @@ form label {
 }
 
 .footer-bg footer nav .navigation-list {
-  margin-left: 145px;
-  margin-right: 398px;
+  font-weight: 200;
+  margin-left: 165px;
+  margin-right: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -767,4 +942,5 @@ form label {
   font-size: 22px;
   font-family: roboto;
   line-height: 50px;
+  letter-spacing: 2px;
 }
