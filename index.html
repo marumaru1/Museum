@@ -4,7 +4,7 @@
 <head>
     <!--  css -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="./assets/favicon.ico">
+    <link rel="shortcut icon" class="favicon" href="./favicon.ico" type="image/x-icon">
     <!-- шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +30,7 @@
                     <li><a href="#Visiting">Visiting</a></li>
                     <li><a href="#Explore"> Explore</a></li>
                     <li><a href="#Video">Video</a></li>
-                    <li><a href="#Visiting">Gallery</a></li>
+                    <li><a href="#Gallery">Gallery</a></li>
                     <li><a href="#Tickets">Tickets</a> </li>
                     <li><a href="#Contacts">Contacts</a></li>
                 </ul>
@@ -50,7 +50,8 @@
                         TO THE LOUVRE
                     </h1>
                     <h2 class="title-description">From the castle to the museum</h2>
-                    <button class="title-btn">Discover the Louvre</button>
+                    
+                    <button class="title-btn" >Discover the Louvre</button>
                 </div>
             </section>
         </div>
@@ -141,7 +142,7 @@
                     <div class="before-pic">
                         <img src="./assets/img/Rectangle(6).jpg" alt="foto">
                     </div>
-                    <img class="explore-slider" src="./assets/img/explore slider (1).png" alt="foto">
+                    <img class="explore-slider" src="./assets/img/exploreslider(1).png" alt="foto">
                     <div class="after-pic">
                         <img src="./assets/img/Rectanglesecond.png" alt="foto">
                     </div>
@@ -156,50 +157,37 @@
                     or Hammurabi's Code</p>
             </div>
             <div class="player">
-                <button class="play"></button>
+                <button class="play">
+                    <img src="./assets/img/playbutton.png" alt="play">
+                </button>
                 <button class="play-small"></button>
-                <button class="left"></button>
-                <button class="right"></button>
-                <button class="fullscreen"></button>
+                
                 <button class="volume"></button>
-                <img src="./assets/img/Frame.jpg" alt="player">
+                <img src="./assets/img/Frame.png" alt="player">
+                <img src="./assets/img/Frame2.png" alt="player">
             </div>
             <div class="video-menu">
-                <iframe width="454" height="254" src="https://www.youtube.com/embed/zp1BXPX8jcU"
-                    title="YouTube video player" frameborder="0" loading="lazy"
+                <iframe width="456" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI"
+                    title="YouTube video player"  loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                <iframe width="454" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo"
-                    title="YouTube video player" frameborder="0" loading="lazy"
+                <iframe width="456" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo"
+                    title="YouTube video player"  loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                <iframe width="454" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY"
-                    title="YouTube video player" frameborder="0" loading="lazy"
+                <iframe width="456" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY"
+                    title="YouTube video player"  loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
         </section>
 
         <div class="gallery-bg">
-            <section class="gallery">
+            <section class="gallery" id="Gallery">
                 <h2>art gallery</h2>
                 <div class="picture-container">
                     <div class="picture-inner-container">
-                        <img src="./assets/img/galery/galery1.jpg" alt="">
-                        <img src="./assets/img/galery/galery2.jpg" alt="">
-                        <img src="./assets/img/galery/galery3.jpg" alt="">
-                        <img src="./assets/img/galery/galery4.jpg" alt="">
-                        <img src="./assets/img/galery/galery5.jpg" alt="">
-                        <img src="./assets/img/galery/galery6.jpg" alt="">
-                        <img src="./assets/img/galery/galery7.jpg" alt="">
-                        <img src="./assets/img/galery/galery8.jpg" alt="">
-                        <img src="./assets/img/galery/galery9.jpg" alt="">
-                        <img src="./assets/img/galery/galery10.jpg" alt="">
-                        <img src="./assets/img/galery/galery11.jpg" alt="">
-                        <img src="./assets/img/galery/galery12.jpg" alt="">
-                        <img src="./assets/img/galery/galery13.jpg" alt="">
-                        <img src="./assets/img/galery/galery14.jpg" alt="">
-                        <img src="./assets/img/galery/galery15.jpg" alt="">
+                       
                     </div>
                 </div>
             </section>
@@ -208,6 +196,62 @@
         <div class="tickets-bg" id="Tickets">
             <section class="tickets">
                 <h2>BUY TICKETS</h2>
+                <form id="form-buy" class="form-buy" style="display: none;">
+                    <div class="tickets-container1">
+                   
+                    <div class="booking-tickets">
+                        <img src="./assets/svg/logo1.svg" alt="1">
+                        <p class="p1">Booking tickets</p>
+                        <p class="p2">Tour to Louvre</p>
+                        <input class="input-date" type="date" id="start" name="date" min="2018-01-01" max="2021-12-31">
+                        <input class="input-time" type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+                        <input class="input-text" type="text" value="Name">
+                        <input class="input-email" type="email" id="email" value="email" pattern=".+@globex\.com" size="30" required>
+                        <input class="input-tel" type="tel" id="phone" value="Tel" name="phone" pattern="" required>
+                        <select class="select">
+                            <option  label = "Adult">
+                            <option  label = "Kid">
+                        </select>
+                        <div class="entry-ticket">
+                            <p class="p3">Entry ticket</p>
+                            
+                            
+                        <div class="firstsec">
+                            <p>Basic 18+ (20 €)</p>
+                            <div class="number1">
+                                <button type="button" onclick="this.nextElementSibling.stepDown()">−</button>
+                                <input class="inputnumber number" type="number" min="0" max="20" value="1" readonly >
+                                <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                            </div>
+                        </div>
+                        <div class="firstsec">
+                            <p>Senior 65+ (10 €)</p>
+                            <div class="number1">
+                                <button type="button" onclick="this.nextElementSibling.stepDown()">−</button>
+                                <input class="inputnumber number" type="number" min="0" max="20" value="1" readonly>
+                                <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                            </div>
+                        </div>
+                        </div>
+                        
+                    </div>
+                    <div class="overview">
+                        <p class="p1">Overview</p>
+                        <p class="p2">Tour to Louvre</p>
+                        <p class="p3">Friday, August 19</p>
+                        <p class="p3">16 : 30</p>
+                        <p class="p3">Temporary exhibition</p>
+                        <p class="p6">Basic (20 €)              <span> 20 €</span></p>
+                        <p class="p6">Senior(10 €)             <span> 20 €</span></p>
+                        <div class="rec"></div>
+                        <p class="p8">Total: <span>60 €</span> </p>
+                        <img class="pic" src="./assets/img/card.png" alt="22">
+                        
+                        <button class="btn1">Book</button>
+                    </div>
+                    <img class="close" src="./assets/img/Close.png" alt="close" id="closeForm">
+                </div>
+                </form>
                 <div class="tickets-container">
                     <div class="left-side">
                         <img src="./assets/img/Rectangle(7).jpg" alt="ticket">
@@ -235,27 +279,33 @@
                         <div class="amount">
                             <h4>Amount</h4>
                             <p>Basic 18+</p>
-                            <input type="number" min="0" max="100" value="1" class="clicker" readonly></input>
+                            <input type="number" min="0" max="100" value="1" class="clicker" readonly>
                             <p>Senior 65+</p>
-                            <input type="number" min="0" max="100" value="1" class="clicker" readonly></input>
+                            <input type="number" min="0" max="100" value="1" class="clicker" readonly>
                             <p class="price">Total &#8364;220</p>
-                            <button>Buy Now</button>
+                            <input class="button-buy" type="button" value="Buy Now" id='showButton' />
+                            
+                            
                         </div>
                     </div>
+                    
                 </div>
                 <div class="paralax"></div>
             </section>
         </div>
-        
+
         <section class="section contacts" id="Contacts">
             <h2>CONTACTS</h2>
             <div class="contacts-container">
-                <p class="contacts-title">Palais Royal <br> Musee du Louvre</p>
-                <p class="contacts-info">address:75001 Paris, France<br>phone: +33(0) 1 40 20 50 50 <br>
-                    mail: info@louvre.fr </p>
-            
-            <img src="./assets/img/Rectangle(8).jpg" alt="map">
-        </div>
+                <p class="contacts-title">Palais Royal <span> Musee du Louvre</span></p>
+                <p class="contacts-info">
+                    <a >address: 75001 Paris, France</a>
+                    <a href="tel:+33(0)140205050">phone: +33(0) 1 40 20 50 50</a>
+                    <a href="mailto:info@louvre.fr"> mail: info@louvre.fr</a> 
+                </p>
+
+                <img src="./assets/img/Rectangle(8).jpg" alt="map">
+            </div>
         </section>
 
     </main>
@@ -292,6 +342,7 @@
         </footer>
     </div>
     <script src="js/gallery.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

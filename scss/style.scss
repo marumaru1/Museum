@@ -1,5 +1,8 @@
 @import "null.scss";
-
+.favicon{
+    width: 16px;
+    height: 16px;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -50,6 +53,10 @@ header {
         ul {
             a {
                 color: white;
+                &:hover{
+                    color: #9d8665;
+                    font-size: 24px;
+                }
             }
             letter-spacing: 2px;
             width: 775px;
@@ -160,7 +167,9 @@ header {
         color: #ffffff;
         margin-top: 80px;
         &:hover {
-            box-shadow: red 10px 10px 10px;
+            background-color: #9d8665;
+            transition: 2s;
+            
         }
         &:active {
             width: 355px;
@@ -207,6 +216,13 @@ header {
             display: block;
             width: 440px;
             height: 422px;
+            &:hover{
+                h3::after{
+                    width: 440px;
+                transition: 2s;
+                }
+              
+            }
             img {
                 width: 440px;
                 height: 285px;
@@ -227,7 +243,9 @@ header {
                     background-color: #710707;
                     position: relative;
                     top: 8px;
+                    
                 }
+                
             }
         }
         .description-vt {
@@ -331,11 +349,17 @@ header {
         margin-bottom: 40px;
         position: relative;
         .play {
+            background: none;
             position: absolute;
-            left: 618px;
-            top: 219px;
+            left: 610px;
+            top: 230px;
             width: 220px;
             height: 220px;
+            img{
+                width: 220px;
+            height: 220px;
+            }
+            z-index: 1;
         }
         .left {
             position: absolute;
@@ -369,8 +393,9 @@ header {
         img {
             position: relative;
             width: 1440px;
-            height: 728px;
+            height: 900;
             left: 8px;
+            top: -5px;
         }
     }
     .video-title {
@@ -404,7 +429,254 @@ header {
     height: 1293px;
     margin: 0 auto;
     padding-top: 75px;
+    position: relative;
     .tickets {
+        .tickets-container1{
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-buy{ 
+            .overview{
+                position: relative;
+                width: 530px;
+                height: 663px;
+                border: 1px black solid;
+                margin-top: 90px;
+                .p1{
+                    width: 132px;
+                    height: 38px;
+                    font-family: roboto;
+                    font-weight: 500;
+                    font-size: 32px;
+                    margin-left: 30px;
+                   
+                }
+                .p2{
+                    margin-left: 30px;
+                    width: 141px;
+                    height: 26px;
+                    font-family: roboto;
+                    font-weight: 500;
+                    font-size: 22px;
+                    
+                    color:#740C11;
+                }
+                .p3{
+                    margin-top: 5px;
+                    margin-left: 30px;
+                    font-family: roboto;
+                    font-size: 18px;
+                }
+                .p6{
+                    font-size: 22px;
+                    font-family: roboto;
+                    font-weight: 400;
+                    width: 470px;
+                    height: 30px;
+                    margin-left: 30px;
+                    margin-top: 22px;
+                    span{
+                        margin-left: 260px;
+                    }
+                }
+                .pic{
+                    margin-left: 30px;
+                    width: 450px;
+                    height: 230px;
+                }
+                .btn1{
+                    margin-top: 30px;
+                    width: 220px;
+                    height: 45px;
+                    background: #710707;
+                    color: white;
+                    font-size: 22px;
+                    font-family: roboto;
+                    margin-left: 270px;
+                }
+                .rec{
+                    width: 470px;
+                    height: 2px;
+                    background: #740C11;
+                }
+                .p8{
+                    margin-left: 30px;
+                    margin-top: 10px;
+                    font-size: 32px;
+                    font-family: roboto;
+                    font-weight: 400;
+                    span{
+                        margin-left: 280px;
+                    }
+                }
+            }
+            .close{
+                width: 20px;
+                height: 20px;
+                left: 1400px;
+                top: 10px
+            }
+            width: 1440px;
+            height: 845px;
+            background: rgb(255, 255, 255);
+            position: absolute;
+            left: 240px;
+            top: 150px;
+            z-index: 20;
+            border: 2px solid black;
+            .booking-tickets{
+                left: 235px; 
+                top: 91px;   
+                position: relative;
+
+                width: 420px;
+                height: 670px;
+                position: relative;
+                
+                img{
+                    width: 85px;
+                    height: 41px;
+                }
+                .p1{
+                    font-family: forum;
+                    font-size: 50px;
+                    text-transform: uppercase;
+                    line-height: 55.2px;
+                    color: #9D8665;
+                    padding: 0px;
+                    margin-bottom: 15px;
+                }
+                .p2{
+                    padding: 0;
+                    font-family: roboto;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 21,09;
+                    color: #710707;
+                    &::after {
+                        margin-top: 10px;
+                        margin-bottom: 60px;
+                        content: '';
+                        display: block;
+                        width: 400px;
+                        height: 3px;
+                        background: #710707;
+                    }
+                }
+                .input-date{
+                    font-family: roboto;
+                    font-weight: 400;
+                    position: relative;
+                    width: 190px;
+                    height: 45px;
+                    border:2px solid black;
+                    margin-bottom: 20px;
+                }
+                .input-time{
+                    margin-left: 20px;
+                    margin-bottom: 20px;
+                    font-family: roboto;
+                    font-weight: 400;
+                    width: 190px;
+                    height: 45px;
+                    border: 2px solid black;
+                    position: relative;
+                }
+                .input-text{
+                    font-family: roboto;
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                    width: 400px;
+                    height: 45px;
+                    display: block;
+                    border:1px solid black;
+            }
+            .input-email{
+                    margin-bottom: 20px;
+                    width: 400px;
+                    height: 45px;
+                    display: block;
+                    border:1px solid black;
+            }
+            .input-tel{
+                    margin-bottom: 20px;
+                    width: 400px;
+                    height: 45px;
+                    display: block;
+                    border:1px solid black;
+            }
+            .select{
+                    margin-bottom: 20px;
+                    width: 400px;
+                    height: 45px;
+                    display: block;
+                    border:1px solid black;
+            }
+            .entry-ticket{
+                .inputnumber {
+                    font-size: 18px;
+                    font-weight: 400;
+                    font-family: roboto;
+                    text-align: center;
+                    align-content: center;
+                    height: 21px;
+                    width: 35px;
+                }
+                .firstsec{
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 370px;
+                    height: 25px;
+                    p{
+                        font-size: 18px;
+                        font-weight: 400;
+                        font-family: roboto;
+                    }
+                }
+
+                .number1{
+                    
+                    background: #000;
+                    width: 105px;
+                    height: 25px;
+                    border: 2px solid rgb(0, 0, 0);
+                    display: flex;
+                    button {
+                        background: rgb(0, 0, 0);
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 18px;
+                        line-height: 18px;
+                        text-align: center;
+                        color: white;
+                        height: 21px;
+                        width: 35px;
+                    }
+                }
+                width: 400px;
+                height: 135px;
+                border: 2px solid black;
+                .p3{
+                    font-family: forum;
+                    font-size: 18px;
+                    line-height: 19,87;
+                    font-weight: 400;
+                    color: #9D8665;
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 370px;
+                        height: 2px;
+                        background: #710707;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
         max-width: 1440px;
         margin: 0 auto;
         h2 {
@@ -484,7 +756,8 @@ header {
             font-size: 22px;
             line-height: 22.78;
         }
-        button {
+        
+        .button-buy {
             width: 175px;
             height: 50px;
             background: rgb(0, 0, 0);
@@ -494,8 +767,18 @@ header {
             text-align: center;
             margin-top: 50px;
             color: #ffffff;
+            &:hover {
+                background-color: #9d8665;
+                transition: 2s;
+                
+            }
+            &:active {
+                width: 180px;
+                height: 55px;
+            }
         }
     }
+    
     form {
         margin-left: 60px;
         display: flex;
@@ -575,17 +858,23 @@ header {
         margin-bottom: 47px;
         font-family: roboto;
         font-size: 28px;
-        line-height: 32,81px;
+        line-height: 28px;
         font-weight: 500;
         width: 277px;
         font-weight: 700;
+        span{
+            display: block;
+        }
     }
     .contacts-info {
         font-family: roboto;
         font-size: 22px;
         line-height: 50px;
-        width: 277px;
-        
+        width: 290px;
+        a{
+            color: black;
+            font-weight: 300;
+        }
     }
     img {
         position: relative;
@@ -650,6 +939,7 @@ header {
                 background: url(/assets/svg/Instagram.svg);
                 width: 48px;
                 height: 48px;
+                
             }
             & li:nth-child(3) {
                 background: url(/assets/svg/Facebook.svg);
@@ -710,7 +1000,17 @@ header {
                 font-family: roboto;
                 line-height: 50px;
                 letter-spacing: 2px;
+                a{
+                    &:hover{
+                        color: #9d8665;
+                        transition: 2s;
+                        
+                    }
+                }
             }
         }
     }
+}
+body {
+    scroll-behavior: smooth;
 }
