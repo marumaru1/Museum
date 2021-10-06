@@ -49,6 +49,7 @@
     font-weight: 400;
     text-transform: uppercase;
 }
+
 .favicon {
     width: 16px;
     height: 16px;
@@ -67,6 +68,7 @@ html {
     background-color: black;
     padding: 75px 0;
 }
+
 
 .header-bg {
     height: 150px;
@@ -402,39 +404,43 @@ html {
         display: flex;
         width: 720px;
         height: 700px;
-        .explore-pic{
-            width: 720px;
-            height: 700px;
-            background: url('../assets/img/RectangleExp.jpg');
-        }
-        .before-pic {
-            position: relative;
-            left: 10px;
-            width: 720;
-            img {
+        .slidex{
+   
+   
+            .img-comp-container {
+                position: relative;
+                height: 700px; /*should be the same height as the images*/
+                box-sizing: border-box;
+              }
+              
+              .img-comp-img {
+                box-sizing: border-box;
+                position: absolute;
+                width: auto;
+                height: auto;
+                overflow: hidden;
+              }
+              
+              .img-comp-img img {
+                box-sizing: border-box;
+                display: block;
+                vertical-align: middle;
+              }
+              
+              .img-comp-slider {
+                box-sizing: border-box;
+                position: absolute;
+                z-index: 9;
+                display: block;
+                /*set the appearance of the slider:*/
+                width: 40px;
                 height: 700px;
-            }
+                background: url('/assets/img/explore/exploreslider.png');
+              }
         }
-        .after-pic {
-            width: 280px;
-            height: 700px;
-            position: absolute;
-            top: 0px;
-            left: 440px;
-            max-width: 280px;
-            overflow: hidden;
-            background: url('../assets/img/Rectanglesecond.png');
-            z-index: 1;
+        
         }
-        .explore-slider {
-            position: absolute;
-            height: 700px;
-            width: 39px;
-            left: 420px;
-            top: 0px;
-            background: url('../assets/img/exploreslider\(1\).png');
-            z-index: 2;
-        }
+        
     }
     .second-line{
         display: inline;
@@ -478,7 +484,7 @@ html {
             top: 25px;
         }
     }
-}
+
 
 .video {
     .player-img{
