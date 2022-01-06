@@ -1,0 +1,617 @@
+@import './mix';
+.tickets {
+    .container{
+        position: relative;
+        .animation-form-show{
+            animation: form-show 1s forwards;
+            @keyframes form-show {
+                from {left: -2500}
+                to {left: 0}
+             }
+        }
+        .animation-form-hide{
+            animation: form-hide 1s forwards;
+            @keyframes form-hide {
+                from {left: 0}
+                to {left: -2500}
+             }
+        }
+    }
+    h2 {
+        margin-bottom: 100px;
+        height: 90px;
+        @include section-title();
+        color: var(--font-gold);
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #710707;
+            position: relative;
+            top: 25px;
+            margin-bottom: 75px;
+        }
+    }
+    .tickets-container {
+        display: flex;
+        .left-side {
+            width: 720px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .right-side {
+            display: flex;
+            justify-content: space-between;
+            .amount {
+                width: 175px;
+                text-align: right;
+                .count-tickets-basic, .count-tickets-senior {
+                    width: 150px;
+                    height: 50px;
+                    border: 3px solid rgb(0, 0, 0);
+                    display: flex;
+                    margin-left: auto;
+                }
+                .button-buy {
+                    width: 175px;
+                    height: 50px;
+                    background: rgb(0, 0, 0);
+                    font-size: 22px;
+                    font-family: roboto;
+                    letter-spacing: 2px;
+                    text-align: center;
+                    margin-top: 50px;
+                    color: #ffffff;
+                    &:hover {
+                        background-color: #9d8665;
+                        transition: 2s;
+                    }
+                    &:active {
+                        width: 180px;
+                        height: 55px;
+                    }
+                }
+                button {
+                    background: white;
+                    font-family: Roboto;
+                    font-size: 45px;
+                    line-height: 45px;
+                    height: 45px;
+                    width: 48px;
+                    padding-left: 5px;
+                }
+                .price {
+                  display: inline-block;
+                  margin-top: 50px;
+                  font-family: roboto;
+                  font-size: 28px;
+                  line-height: 32.81px;
+                  font-weight: 700;
+                  letter-spacing: 1.65px;
+                }
+            }
+        }
+        .input-number {
+            font-size: 28px;
+            font-weight: 400;
+            font-family: roboto;
+            text-align: center;
+            align-content: center;
+            height: 45px;
+            width: 48px;
+            padding-left: 10px;
+        }
+        label{
+            display: flex;
+        }
+        .buy-tickets-title{
+            font-family: roboto;
+            font-size: 28px;
+            line-height: 28px;
+            margin-bottom: 36px;
+            font-weight: 700;
+            position: relative;
+            display: block;
+        }
+        p {
+            margin-top: 10px;
+            font-family: roboto;
+            font-size: 22px;
+            line-height: 25.78px;
+            font-weight: 300;
+            text-align: left;
+            padding-left: 25px;
+            margin-bottom: 14px;
+        }
+        form {
+            margin-left: 60px;
+            display: flex;
+            flex-direction: column;
+            width: 270px;
+            height: 262px;
+            .form-container {
+                display: flex;
+                flex-direction: column;
+                row-gap: 25px;
+            }
+            h4 {
+                font-family: roboto;
+                font-size: 28px;
+                line-height: 28px;
+                margin-bottom: 60px;
+                font-weight: 700;
+            }
+            p {
+                font-family: roboto;
+                font-size: 28px;
+                line-height: 32.81px;
+            }
+            label {
+                font-family: roboto;
+                font-size: 22px;
+                line-height: 25.78px;
+                span {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+    .form-buy {
+        position: absolute;
+        display: none;
+        left: -2500px;
+        width: 100%;
+        height: 845px;
+        background: rgb(255, 255, 255);
+        z-index: 20;
+        border: 2px solid black;
+        font-size: 16px;
+        font-weight: bold;
+        .close {
+            position: relative;
+            top: 20px;
+            left: 95%;
+            width: 40px;
+            height: 40px;
+            margin-bottom: 40px;
+        }
+        .tickets-form-container {
+            width: 1200px;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            .booking-tickets-container{
+                display: flex;
+                flex-wrap:wrap;
+                width: 460px;
+                border-radius: 10px;
+                padding: 30px;
+                img {
+                    width: 85px;
+                    height: 41px;
+                }
+                .booking-tickets-main-title {
+                    font-family: forum;
+                    font-size: 50px;
+                    text-transform: uppercase;
+                    line-height: 55.2px;
+                    color: #9d8665;
+                    padding: 0px;
+                    margin-bottom: 15px;
+                }
+                .booking-tickets-title {
+                    flex: 0 1 100%;
+                    text-transform: uppercase;
+                    font-family: roboto;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 21,09;
+                    color: #710707;
+                    &::after {
+                        margin: 20px 0;
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 3px;
+                        background: #710707;
+                    }
+                }
+                .input{
+                    font-family: roboto;
+                    font-weight: bold;
+                    font-style: 18px;
+                    text-transform: uppercase;
+                    height: 45px;
+                    border: 2px solid black;
+                    border-radius: 10px;
+                    margin-bottom: 20px;
+                    box-sizing: border-box;
+                    width: 100%;
+                }
+                .booking-tickets-name, .booking-tickets-tel, .booking-tickets-email{
+                    flex:0 1 100%;
+                }
+                .booking-tickets-time{
+                    margin-left: 2%;
+                    flex:0 1 48%;
+                }
+                .booking-tickets-date{
+                    margin-right: 2%;
+                    flex:0 1 48%;
+                }
+                .entry-ticket {
+                width: 100%;
+                border: 2px solid black;
+                border-radius: 10px;
+                padding: 20px;
+                  .input-number {
+                    font-size: 18px;
+                    font-weight: 400;
+                    font-family: roboto;
+                    text-align: center;
+                    align-content: center;
+                    border: 1px solid black;
+                    height: 30px;
+                    box-sizing: border-box;
+                  }
+                    .count-tickets-basic, .count-tickets-senior {
+                        font-size: 18px;
+                        margin-top: 20px;
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        height: 30px;
+                        button {
+                            background: rgb(0, 0, 0);
+                            font-family: Roboto;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 18px;
+                            line-height: 18px;
+                            text-align: center;
+                            color: white;
+                            height: 30px;
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+            .overview-container {
+                display: flex;
+                position: relative;
+                flex-wrap: wrap;
+                width: 530px;
+                border-radius: 10px;
+                padding: 30px;
+                border-radius: 10px;
+                border: 2px solid black;
+                .overview-info{
+                    display: flex;
+                    flex: 0 1 50%;
+                    flex-direction: column;
+                    height: 120px;
+                }
+                .chosen-basic, .chosen-senior{
+                    flex:0 1 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    height: 20px;
+                    font-size: 20px;
+                }
+                .chosen-senior{
+                    position: relative;
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 3px;
+                        position: absolute;
+                        top: 30px;
+                        background: rgb(235, 9, 9);
+                    }
+                }
+                .total-price{
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                }
+                .overview-title {
+                    font-family: forum;
+                    font-size: 32px;
+                    color: #000000;
+                    flex: 0 1 100%;
+                }
+                img{
+                    flex: 0 1 50%;
+                    width: 150px;
+                    height: 120px;
+                }
+                .booking-tickets-title {
+                    flex: 0 1 50%;
+                    font-family: roboto;
+                    font-weight:bold;
+                    font-size: 18px;
+                    line-height: 21,09;
+                    color: #710707;
+                }
+                #chosen-date, #chosen-time, #chosen-exibition{
+                    flex: 0 1 50%;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                .card-container{
+                    width: 100%;
+                    height: 241px;
+                    position: relative;
+                    input{
+                        height: 35px;
+                    }
+                    .front-card{
+                        text-transform: uppercase;
+                        height: 211px;
+                        width: 360px;
+                        background: rgb(94, 84, 84);
+                        border:1px solid black;
+                        border-radius: 10px;
+                        position: absolute;
+                        z-index: 20;
+                        display: flex;
+                        flex-direction: column;
+                        .type-card{
+                            left: 270px;
+                            top: 10px;
+                            width: 80px;
+                            height: 160px;
+                            position: absolute;
+                            background: url('../assets/img/tickets/Daco_4109325.png');
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                        }
+                        .card-number{
+                            width: 70%;
+                            margin: 10px;
+                            input{
+                                width: 100%;
+                            }
+                        }
+                        .expiration-date{
+                            display: flex;
+                            flex-wrap: wrap;
+                            column-gap: 20px;
+                            margin: 10px;
+                            width: 70%;
+                            p{
+                                flex: 0 1 100%;
+                            }
+                            input{
+                                flex: 0 1 30%;
+                            }
+                        }
+                        .cardholder{
+                            margin: 10px;
+                            width: 90%;
+                            input{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .back-card{
+                        height: 211px;
+                        width: 360px;
+                        background: rgb(94, 84, 84);
+                        border:1px solid black;
+                        border-radius: 10px;
+                        position: absolute;
+                        top: 30px;
+                        left: 110px;
+                        z-index: 19;
+                        overflow: hidden;
+                        .black-line{
+                            height: 45px;
+                            width: 100%;
+                            background: black;
+                            position: relative;
+                            top: 20px;
+                        }
+                        .secret-code{
+                            position: relative;
+                            left: 75%;
+                            top: 30%;
+                            display: flex;
+                            flex-direction: column;
+                            width: 70px;
+                            input{
+                                width: 70px;
+                            }
+                        }
+                    }
+                }
+                .book-btn{
+                    background: rgb(77, 13, 13);
+                    width: 220px;
+                    height: 45px;
+                    color: white;
+                    text-align: center;
+                    font-size: 22px;
+                    position: absolute;
+                    right:20px;
+                    bottom: 10px;
+                    
+                    
+                } 
+            }
+        }
+    }
+    .paralax {
+        margin-top: 75px;
+        position: relative;
+        width: 100%;
+        height: 400px;
+        background: url("/assets/img/parallax.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 1024px) {
+    .tickets{
+        .container{
+            .tickets-container{
+                .left-side{
+                    flex-shrink: 1;
+                }
+                .right-side{
+                    flex-shrink: 0;
+                    margin-left: 20px;
+                }
+            }
+            h2{
+                @include section-title1024();
+                color: var(--font-gold);
+                
+            }
+        }
+    }
+    .form-buy{
+        border: none !important;
+    }
+    .tickets-form-container{
+        width: 100% !important;
+    }
+    .type-tickets{
+        display: none !important;
+    }
+    .amount{
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .tickets{
+        .container{
+            h2{
+                @include section-title768();
+                color: var(--font-gold);
+                
+            }
+        }
+    }
+    .form-buy{
+        height: auto !important;
+        top: 150px !important;
+        padding: 30px 0 !important;
+    }
+    .tickets-form-container{
+        width: 100% !important;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .type-tickets{
+        display: none !important;
+    }
+    .amount{
+        margin-left: auto;
+    }
+    .close{
+        left: 80% !important;
+        position: absolute !important;
+    }
+    .overview-container{
+        div{
+            margin: 10px 0 !important;
+        }
+        .book-btn{
+            position: relative !important;
+            bottom: 0 !important;
+            margin: 20px 0 !important;
+        }
+    }
+}
+
+@media (max-width:425px) {
+    .tickets{
+        .container{
+            h2{
+                @include section-title420();
+                color: var(--font-gold);
+                margin-bottom: 20px;
+            }
+            .tickets-container{
+                flex-direction: column;
+            }
+            .left-side{
+                height: 200px;
+                width: 100%;
+            }
+            .right-side{
+                justify-content: center;
+                margin: 0 10px !important;
+            }
+        }
+    }
+    .tickets-form-container{
+        width: 100% !important;
+    }
+    .type-tickets{
+        display: none !important;
+    }
+    .amount{
+        width: 100% !important;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0 !important;
+        align-items: center;
+        
+        h4{
+            flex: 0 1 100%;
+            text-align: center;
+        }
+        p {
+            flex: 0 1 50% !important;
+            width: 160px !important;
+            text-align: center;
+        }
+        .price{
+            margin: 10px !important;
+        }
+        .count-tickets-basic, .count-tickets-senior{
+            margin-left: 0 !important;
+        }
+        .button-buy{
+            flex:0 1 100%;
+        }
+    }
+    .paralax{
+        height: 200px !important;
+    }
+    .overview-container{
+        width: 400px !important;
+        div{
+            margin: 10px 0 !important;
+        }
+        .book-btn{
+            position: relative !important;
+            bottom: 0 !important;
+            margin: 20px 0 !important;
+        }
+        .card-container{
+            .front-card{
+                width: 280px !important;
+                .type-card{
+                    top: 45px !important;
+                    left: 190px !important;
+                }
+            }
+            .back-card{
+                left: 48px !important;
+                width: 280px !important;
+            }
+        }
+    }
+}

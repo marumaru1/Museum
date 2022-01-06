@@ -1,0 +1,187 @@
+@import "./mix";
+.welcome {
+  padding-top: 0px !important;
+  padding-bottom: 60px !important;
+  .container {
+    position: relative;
+    .carousel {
+          img{
+            width:100%;
+            height: 100%;
+            min-width: 700px;
+            min-height: 525px;
+          }
+      .darkside {
+        position: absolute;
+        right: 800px;
+        width: 200px;
+        height: 100%;
+        background: linear-gradient(to right, rgb(0, 0, 0), rgba(255, 255, 255, 0));
+        top: 0;
+      }
+    }
+    .welcome-title {
+      top: 150px;
+      z-index: 100;
+      position: absolute;
+      .title-description {
+        flex: 0 1 100%;
+        font-size: 28px;
+        color: white;
+        font-family: roboto;
+        letter-spacing: 2px;
+        font-style: normal;
+        margin-top: 25px;
+        font-weight: 100;
+      }
+      .title-btn {
+        width: 360px;
+        height: 75px;
+        margin-top: 75px;
+        background-color: #710707;
+        border-radius: 5px;
+        font-size: 22px;
+        font-family: roboto;
+        letter-spacing: 2px;
+        text-align: center;
+        color: #ffffff;
+        &:hover {
+          background-color: #9d8665;
+          transition: 2s;
+        }
+        &:active {
+          width: 355px;
+          height: 70px;
+        }
+      }
+      h1 {
+        @include section-title();
+      }
+    }
+    
+  }
+}
+
+@media (max-width: 1024px) {
+  .welcome{
+    .container{
+      .welcome-title{
+        top: 50px;
+        h1{
+          @include section-title1024();
+          color: var(--font-gold);
+        }
+        .title-btn {
+          width: 300px;
+          height: 60px;
+          top: 50px;
+        }
+      }
+      .carousel{
+        img{
+          max-width: 700px;
+        }
+        .darkside {
+          position: absolute;
+          right: 500px;
+        }
+        .slider-dots {
+          width: 700px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:768px) {
+  .welcome{
+    .container{
+      .welcome-title{
+        top:0;
+        position: relative;
+        text-align: center;
+        h1{
+          @include section-title768();
+          color: white;
+        }
+        .title-btn {
+          display: none;
+        }
+      }
+      .carousel{
+        img{
+          max-width: 700px;
+        }
+        .darkside {
+          position: absolute;
+          right: 500px;
+        }
+        .slider-dots {
+          width: 700px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width:425px) {
+  .welcome{
+    .container{
+      .welcome-title{
+        position: relative;
+        text-align: center;
+        top: 0;
+        margin-bottom: 50px;
+        h1{
+          @include section-title420();
+          color: white;
+        }
+        .title-description{
+          font-size: 16px;
+        }
+        .title-btn {
+          display: none;
+        }
+      }
+      .carousel{
+        img{
+          max-width: 100%;
+          min-width: 0 !important;
+          min-height: 0 !important;
+        }
+        .darkside {
+          position: absolute;
+          right: 500px;
+        }
+        .slider-dots {
+          width: 100%;
+          .slider-counter{
+            left: 0;
+          }
+          .slider-number{
+            left: 0;
+            margin-right: 0;
+          }
+          .container-dots{
+            margin-left:0;
+          }
+          .control {
+            .left {
+                z-index: 2;
+                left: -25px;
+                
+            }
+            .right {
+                z-index: 2;
+                left: 10px;
+                background: url("../assets/img/welcome/321.png") no-repeat;
+                width: 30px;
+                height: 10px;
+            }
+        }
+        }
+      }
+    }
+  }
+}

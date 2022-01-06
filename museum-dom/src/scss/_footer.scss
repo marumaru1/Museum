@@ -1,0 +1,175 @@
+.footer-bg {
+    background-color: black;
+    a{
+        color: white;
+    }
+    .rectangle-footer {
+        width: 100%;
+        height: 3px;
+        background: #666666;
+        position: relative;
+        top: 265px;
+    }
+    footer {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 84px;
+        padding-bottom: 50px;
+        .rs-info {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 24px;
+            margin-top: 50px;
+            span {
+                font-weight: 200;
+                color: #ffffff;
+                font-family: roboto;
+                font-size: 22px;
+                letter-spacing: 2px;
+                line-height: 22px;
+            }
+            .rs {
+                font-weight: 200;
+            }
+        }
+        
+        .footer-links {
+            width: 336px;
+            height: 48px;
+            display: flex;
+            justify-content: space-between;
+            & li:first-child {
+                background: url(/assets/svg/Youtube.svg);
+                width: 48px;
+                height: 48px;
+            }
+            & li:nth-child(2) {
+                background: url(/assets/svg/Instagram.svg);
+                width: 48px;
+                height: 48px;
+            }
+            & li:nth-child(3) {
+                background: url(/assets/svg/Facebook.svg);
+                width: 48px;
+                height: 48px;
+            }
+            & li:nth-child(4) {
+                background: url(/assets/svg/Twitter.svg);
+                width: 48px;
+                height: 48px;
+            }
+            & li:nth-child(5) {
+                background: url(/assets/svg/Pinterest.svg);
+                width: 48px;
+                height: 48px;
+            }
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 150px;
+            .container-logo {
+                display: flex;
+                justify-content: space-between;
+                line-height: 50px;
+                font-size: 28px;
+                font-family: forum;
+                color: white;
+                width: 175px;
+                height: 50px;
+                p {
+                    letter-spacing: 5px;
+                    margin-left: 25px;
+                    font-weight: 200;
+                }
+                &:before {
+                    content: url("/assets/svg/logo.svg");
+                }
+            }
+            a {
+                color: white;
+            }
+            .navigation-list {
+                font-weight: 200;
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 153px;
+                flex-direction: column;
+                width: 366px;
+                height: 150px;
+                color: white;
+                font-size: 22px;
+                font-family: roboto;
+                line-height: 50px;
+                letter-spacing: 2px;
+                a {
+                    &:hover {
+                        color: #9d8665;
+                        transition: 2s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    .footer-bg{
+        footer{
+            max-width: 1024px;
+            padding: 50px 20px !important; 
+            nav{
+                display: flex;
+                flex-direction: column;
+                .navigation-list{
+                    flex-direction: row;
+                    width: 100%;
+                    column-gap: 20px;
+                }
+            }
+        }
+        .rectangle-footer{
+            top: 220px;
+        }
+        
+    } 
+}
+@media (max-width:768px) {
+    .footer-bg{
+        footer{
+            max-width: 768px;
+            padding: 50px 20px !important; 
+            
+        }
+        .rectangle-footer{
+            top: 220px;
+        }
+        
+    }
+}
+@media (max-width:425px) {
+    .footer-bg{
+        .rectangle-footer{
+            top: 300px;
+        }
+        footer{
+            padding: 10px !important;
+            nav{
+                align-items: center;
+                height: auto;
+            }
+            .rs-info{
+                span{
+                    font-size: 14px !important;
+                }
+            
+            }
+            .navigation-list{
+                padding: 20px 30px;
+                justify-content: center;
+            }
+        }
+    }
+}
