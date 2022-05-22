@@ -1,73 +1,72 @@
-
-@use "null";
-@use "welcome";
-@use "header";
-@use "visiting";
-@use "explore";
-@use "video";
-@use "gallery";
-@use "tickets";
-@use "contacts";
-@use "slider";
-@use "footer";
-@import "mix"; 
+@use 'null';
+@use 'welcome';
+@use 'header';
+@use 'visiting';
+@use 'explore';
+@use 'video';
+@use 'gallery';
+@use 'tickets';
+@use 'contacts';
+@use 'slider';
+@use 'footer';
+@import 'mix';
 
 .display-hide {
-    display: none;
-  }
+  display: none;
+}
 .display-show {
-    display: block;
-  }
+  display: block;
+}
 .favicon {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+header {
+  padding: 0 20px;
 }
 .container {
-    margin: 0 auto;
-    max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 .section {
-    padding: 75px 0;
+  padding: 75px 0;
 }
 .dark-section {
-    background-color: black;
-    padding: 75px 0;
+  background-color: black;
+  padding: 75px 0;
 }
-
 
 @media (max-width: 1024px) {
-    .dark-section {
-        padding: 60px 20px;
-    }
-    .section {
-        padding: 60px 20px;
-    }
-    header{
-        padding: 0 20px; 
-    }
-    .container {
-        margin: 0 auto;
-        max-width: 1024px;
-    }
-    
+  .dark-section {
+    padding: 60px 20px;
+  }
+  .section {
+    padding: 60px 20px;
+  }
+  header {
+    padding: 0 20px;
+  }
+  .container {
+    margin: 0 auto;
+    max-width: 1024px;
+  }
 }
-
 
 @media (max-width: 768px) {
-    .dark-section {
-        padding: 40px 0px;
-    }
-    .section {
-        padding: 40px 0px;
-    }
-    header{
-        padding: 0px; 
-    }
-    footer{
-        padding: 0;
-    }
+  .dark-section {
+    padding: 40px 0px;
+  }
+  .section {
+    padding: 40px 0px;
+  }
+  header {
+    padding: 0px;
+  }
+  footer {
+    padding: 0;
+  }
 }
- 
