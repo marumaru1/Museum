@@ -17,4 +17,4 @@
 
 ## Deploy
 
-:globe_with_meridians: andrey-potkas-museum.netlify.app
+:globe_with_meridians: https://andrey-potkas-museum.netlify.app/
