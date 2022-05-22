@@ -224,9 +224,9 @@ artist of the Spanish Golden Age.</p>
             </div>
             <button class="volume"></button>
             <button class="volume-button-close display-hide"></button>
-            <button class="fullscreen-btn"></button>
             <input type="range" value="54" min="0" max="100" step="1" class="progress">
             <input type="range" value="0.5" min="0" max="1" step="0.01" class="volume-progress">
+            <button class="fullscreen-btn"></button>
           </div>
         </div>
         <div class="video-slider">
@@ -409,7 +409,7 @@ artist of the Spanish Golden Age.</p>
               </div>
             </form>
             <div class="amount">
-              <h4 class="buy-tickets-title">Amount</h4>
+              <h4 >Amount</h4>
               <p class="buy-tickets-title">Basic 18+</p>
               <div class="count-tickets-basic">
                 <button type="button" onclick="this.nextElementSibling.stepDown()">−</button>
@@ -422,7 +422,10 @@ artist of the Spanish Golden Age.</p>
                 <input class="input-number number" type="number" min="0" max="20" value="1" readonly>
                 <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
               </div>
-              <p class="buy-tickets-title price">Total &#8364;:</p>
+              <div class="price-container">
+                <p class="buy-tickets-title price">Total &#8364;:</p>
+              </div>
+              
               <input class="button-buy" type="button" value="Buy Now" id='buy-button' />
             </div>
           </div>
@@ -449,7 +452,7 @@ artist of the Spanish Golden Age.</p>
     </section>
   </main>
   <div class="footer-bg">
-    <div class="rectangle-footer"></div>
+
     <footer>
       <nav>
         <div class="container-logo">

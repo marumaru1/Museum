@@ -3,6 +3,7 @@
   background: #000;
   header {
     @include flex-center();
+    padding: 0 20px;
     height: 150px;
     .menu {
       background: url('../assets/svg/Menu.svg');

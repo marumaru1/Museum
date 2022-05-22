@@ -14,8 +14,9 @@
       p {
         font-family: roboto;
         font-size: 22px;
+        line-height: 40px;
+        font-weight: 300;
         color: white;
-        font-weight: 200;
       }
     }
     .slidex {
@@ -58,7 +59,18 @@
       color: white;
       @include section-title1024();
     }
+
     .explore-container {
+      .explore-text {
+        row-gap: 20px;
+        p {
+          font-family: roboto;
+          font-size: 18px;
+          line-height: 22px;
+          font-weight: 300;
+          color: white;
+        }
+      }
       flex-direction: column;
       align-items: center;
     }
@@ -71,7 +83,20 @@
       color: white;
       @include section-title768();
     }
+
     .explore-container {
+      .explore-text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        p {
+          font-family: roboto;
+          font-size: 16px;
+          line-height: 22px;
+          font-weight: 300;
+          color: white;
+        }
+      }
       .slidex {
         display: flex;
         .img-comp-container {
@@ -99,7 +124,20 @@
     h2 {
       @include section-title420();
     }
+
     .explore-container {
+      .explore-text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        p {
+          font-family: roboto;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 300;
+          color: white;
+        }
+      }
       .slidex {
         display: flex;
         .img-comp-container {
