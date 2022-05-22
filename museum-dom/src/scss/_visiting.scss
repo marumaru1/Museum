@@ -5,12 +5,11 @@
     color: var(--font-gold);
   }
   .visiting-menu {
-    display: flex;
+    @include flex-center();
     flex-wrap: wrap;
     column-gap: 60px;
     row-gap: 78px;
-    position: relative;
-    justify-content: center;
+
     .link-vt {
       display: block;
       width: 440px;
@@ -82,7 +81,7 @@
       margin-top: 83px;
       justify-content: center;
       .link-vt {
-        width: 330px;
+        width: 300px;
         height: 345px;
         &:hover {
           h3::after {
@@ -91,7 +90,7 @@
           }
         }
         img {
-          width: 330px;
+          width: 300px;
           height: 215px;
         }
         h3 {

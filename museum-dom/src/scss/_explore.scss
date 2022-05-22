@@ -15,6 +15,7 @@
         font-family: roboto;
         font-size: 22px;
         color: white;
+        font-weight: 200;
       }
     }
     .slidex {
@@ -52,10 +53,71 @@
 }
 
 @media (max-width: 1024px) {
+  .explore {
+    h2 {
+      color: white;
+      @include section-title1024();
+    }
+    .explore-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
 
 @media (max-width: 768px) {
+  .explore {
+    h2 {
+      color: white;
+      @include section-title768();
+    }
+    .explore-container {
+      .slidex {
+        display: flex;
+        .img-comp-container {
+          width: 400px;
+          height: 400px;
+        }
+
+        .img-comp-img img {
+          width: 400px;
+          height: 400px;
+        }
+
+        .img-comp-slider {
+          background: url('../assets/img/explore/exploreslider.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 425px) {
+  .explore {
+    h2 {
+      @include section-title420();
+    }
+    .explore-container {
+      .slidex {
+        display: flex;
+        .img-comp-container {
+          width: 300px;
+          height: 300px;
+        }
+
+        .img-comp-img img {
+          width: 300px;
+          height: 300px;
+        }
+
+        .img-comp-slider {
+          background: url('../assets/img/explore/exploreslider.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
 }
