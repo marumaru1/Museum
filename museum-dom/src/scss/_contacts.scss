@@ -1,114 +1,115 @@
 @import './mix';
 .contacts {
-    .container{
-        h2 {
-            @include section-title();
-            color: var(--font-gold);
-            &:after {
-                content: "";
-                display: block;
-                width: 100%;
-                height: 3px;
-                background-color: #710707;
-                position: relative;
-                top: 26px;
-            }
-        }
-    .contacts-container {
+  .container {
+    h2 {
+      @include section-title();
+      color: var(--font-gold);
+      &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #710707;
         position: relative;
-        margin-top: 100px;
-        display: flex;
+        top: 26px;
+      }
+    }
+    .contacts-container {
+      position: relative;
+      margin-top: 100px;
+      display: flex;
+      padding: 0 20px;
+      .contacts-info {
+        flex-shrink: 0;
         padding: 0 20px;
-        .contacts-info {
-            flex-shrink: 0;
-            padding: 0 20px;
-            display: flex;
-            flex-direction: column;
-            font-family: roboto;
-            font-size: 22px;
-            line-height: 50px;
-            .contacts-title {
-                margin-bottom: 47px;
-                font-family: roboto;
-                font-size: 28px;
-                line-height: 28px;
-                font-weight: 500;
-                font-weight: 700;
-                span {
-                    display: block;
-                }
-            }
-            a {
-                color: black;
-                font-weight: 300;
-            }
+        display: flex;
+        flex-direction: column;
+        font-family: roboto;
+        font-size: 22px;
+        line-height: 50px;
+        .contacts-title {
+          margin-bottom: 47px;
+          font-family: roboto;
+          font-size: 28px;
+          line-height: 28px;
+          font-weight: 500;
+          font-weight: 700;
+          span {
+            display: block;
+          }
         }
-        #map { 
-            position: relative;
-            right: 0;
-            top: 0px;
-            width: 960px;
-            height: 620px;
+        a {
+          color: black;
+          font-weight: 300;
         }
-        .marker {
-            background-image: url('../assets/svg/25613.png');
-            background-size: cover;
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-          } 
+      }
+      #map {
+        position: relative;
+        right: 0;
+        top: 0px;
+        width: 960px;
+        height: 620px;
+      }
+      .marker {
+        background-image: url('../assets/svg/25613.png');
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
     }
   }
 }
 
 @media (max-width: 1024px) {
-    .contacts{
-        .container{
-            h2{
-                @include section-title1024();
-                color: var(--font-gold);
-            } 
-            #map { 
-                position: relative;
-                right: 0;
-                top: 0px;
-                width: 694px !important;
-                height: 454px !important;
-            }
-        }
-        
+  .contacts {
+    .container {
+      h2 {
+        @include section-title1024();
+        color: var(--font-gold);
+      }
+      #map {
+        position: relative;
+        right: 0;
+        top: 0px;
+        width: 694px !important;
+        height: 454px !important;
+      }
     }
+  }
 }
 
 @media (max-width: 768px) {
-    .contacts{
-        .container{
-            h2{
-                @include section-title768();
-                color: var(--font-gold);
-            } 
-            .contacts-container{
-                flex-direction: column;
-            }
-        }
+  .contacts {
+    .container {
+      h2 {
+        @include section-title768();
+        color: var(--font-gold);
+      }
+      .contacts-container {
+        flex-direction: column;
+      }
     }
+    #map {
+      max-width: 480px;
+    }
+  }
 }
 
 @media (max-width: 425px) {
-    .contacts{
-        .container{
-            h2{
-                @include section-title420();
-                color: var(--font-gold);
-            } 
-            #map { 
-                position: relative;
-                right: 0;
-                top: 0px;
-                width: 350px !important;
-                height: 254px !important;
-            }
-        }
-        
+  .contacts {
+    .container {
+      h2 {
+        @include section-title420();
+        color: var(--font-gold);
+      }
+      #map {
+        position: relative;
+        right: 0;
+        top: 0px;
+        width: 350px !important;
+        height: 254px !important;
+      }
     }
+  }
 }

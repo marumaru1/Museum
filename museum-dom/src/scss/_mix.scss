@@ -1,52 +1,66 @@
 :root {
-    --dark-red: #710707;
-    --font-gold: #9d8665;
+  --dark-red: #710707;
+  --font-gold: #9d8665;
 }
 @mixin underline {
-    content: "";
-    display: block;
-    width: 1440px;
-    height: 3px;
-    background-color: #710707;
-    position: relative;
-    top: 26px;
+  content: '';
+  display: block;
+  width: 1440px;
+  height: 3px;
+  background-color: #710707;
+  position: relative;
+  top: 26px;
 }
 @mixin section-title {
-    font-family: forum;
-    font-size: 80px;
-    color: white;
-    letter-spacing: 5px;
-    line-height: 90px;
-    font-weight: 400;
-    text-transform: uppercase;
+  font-family: forum;
+  font-size: 80px;
+  color: white;
+  letter-spacing: 5px;
+  line-height: 90px;
+  font-weight: 400;
+  text-transform: uppercase;
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #710707;
+    margin-bottom: 10px;
+  }
 }
 @mixin section-title1024 {
-    font-family: forum;
-    font-size: 50px;
-    color: white;
-    letter-spacing: 5px;
-    line-height: 75px;
-    font-weight: 400;
-    text-transform: uppercase;
-    &::after{
-        width: 100%;
-    }
+  font-family: forum;
+  font-size: 50px;
+  color: white;
+  letter-spacing: 5px;
+  line-height: 75px;
+  font-weight: 400;
+  text-transform: uppercase;
+  &::after {
+    width: 100%;
+  }
 }
 @mixin section-title768 {
-    font-family: forum;
-    font-size: 40px;
-    color: white;
-    letter-spacing: 5px;
-    line-height: 60px;
-    font-weight: 400;
-    text-transform: uppercase;
+  font-family: forum;
+  font-size: 40px;
+  color: white;
+  letter-spacing: 5px;
+  line-height: 60px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 @mixin section-title420 {
-    font-family: forum;
-    font-size: 28px;
-    color: white;
-    letter-spacing: 5px;
-    line-height: 40px;
-    font-weight: 400;
-    text-transform: uppercase;
+  font-family: forum;
+  font-size: 28px;
+  color: white;
+  letter-spacing: 5px;
+  line-height: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

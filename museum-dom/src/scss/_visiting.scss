@@ -1,17 +1,8 @@
-@import "./mix";
+@import './mix';
 .visiting {
   h2 {
     @include section-title();
     color: var(--font-gold);
-    &:after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 3px;
-      background-color: #710707;
-      position: relative;
-      top: 26px;
-    }
   }
   .visiting-menu {
     display: flex;
@@ -43,7 +34,7 @@
         letter-spacing: 5px;
         color: black;
         &::after {
-          content: "";
+          content: '';
           display: block;
           width: 300px;
           height: 2px;
@@ -82,54 +73,53 @@
 @media (max-width: 1024px) {
   .visiting {
     h2 {
-        @include section-title1024();
-        color: var(--font-gold);
-        padding-left: 0px;
+      @include section-title1024();
+      color: var(--font-gold);
+      padding-left: 0px;
     }
     .visiting-menu {
-        row-gap: 60px;
-        margin-top: 83px;
-        justify-content: center;
-        .link-vt {
-            
+      row-gap: 60px;
+      margin-top: 83px;
+      justify-content: center;
+      .link-vt {
+        width: 330px;
+        height: 345px;
+        &:hover {
+          h3::after {
             width: 330px;
-            height: 345px;
-            &:hover {
-                h3::after {
-                    width: 330px;
-                    transition: 2s;
-                }
-            }
-            img {
-                width: 330px;
-                height: 215px;
-            }
-            h3 {
-                font-size: 28px;
-                line-height: 30.91px;
-                letter-spacing: 3px;
-                color: black;
-                &::after {
-                    content: "";
-                    display: block;
-                    width: 150px;
-                    height: 2px;
-                    background-color: #710707;
-                    position: relative;
-                    top: 10px;
-                }
-            }
-            .description-vt {
-                h4 {
-                    font-size: 20px;
-                    line-height: 23.44px;
-                }
-                h5 {
-                    font-size: 16px;
-                    line-height: 18.75px;
-                }
-            }
+            transition: 2s;
+          }
         }
+        img {
+          width: 330px;
+          height: 215px;
+        }
+        h3 {
+          font-size: 28px;
+          line-height: 30.91px;
+          letter-spacing: 3px;
+          color: black;
+          &::after {
+            content: '';
+            display: block;
+            width: 150px;
+            height: 2px;
+            background-color: #710707;
+            position: relative;
+            top: 10px;
+          }
+        }
+        .description-vt {
+          h4 {
+            font-size: 20px;
+            line-height: 23.44px;
+          }
+          h5 {
+            font-size: 16px;
+            line-height: 18.75px;
+          }
+        }
+      }
     }
   }
 }
@@ -137,18 +127,18 @@
 @media (max-width: 768px) {
   .visiting {
     h2 {
-        @include section-title768();
-        color: var(--font-gold);
-        padding-left: 0px;
+      @include section-title768();
+      color: var(--font-gold);
+      padding-left: 0px;
     }
   }
 }
 @media (max-width: 425px) {
   .visiting {
     h2 {
-        @include section-title420();
-        color: var(--font-gold);
-        padding-left: 0px;
+      @include section-title420();
+      color: var(--font-gold);
+      padding-left: 0px;
     }
   }
 }
